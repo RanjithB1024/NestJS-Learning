@@ -7,13 +7,17 @@ export class CreateUserDto {
   name: string;
 
   @IsNotEmpty()
-  @IsString({
-    each: true,
-  })
-  ingredients: string[];
+  @IsNumber()
+  @IsPositive()
+  DeptId: number;
 
   @IsNotEmpty()
   @IsNumber()
   @IsPositive()
-  abv: number;
+  DeptName: string;
+
+  @IsNotEmpty()
+  @IsNumber()
+  @IsPositive()
+  EmpId: number;
 }

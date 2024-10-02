@@ -12,10 +12,13 @@ export class Users {
   name: string;
 
   @Prop({ type: [String], required: true })
-  ingredients: string[];
+  DeptId: number;
+
+  @Prop({ type: [String], required: true })
+  DeptName: string;
 
   @Prop({ type: Number, required: true })
-  abv: number;
+  EmpId: number;
 }
 
 export const UsersSchema = SchemaFactory.createForClass(Users);

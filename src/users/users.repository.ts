@@ -16,6 +16,9 @@ export class UsersRepository {
   async findAll(): Promise<Users[]> {
     return this.usersModel.find().exec();
   }
+  async findAllwithCustomException(): Promise<Users[]> {
+    return this.usersModel.find().exec();
+  }
 
   async delete(id: string) {
     return this.usersModel.deleteOne({ _id: id });
